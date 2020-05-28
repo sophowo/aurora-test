@@ -4,7 +4,7 @@
 		<name>Testing Content</name>
 		<description>I test things.</description>
 		<update version="0.10">
-			<file name="testingcontent.index" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/core/dungeon-masters-guide.index" />
+			<file name="testingcontent.index" url="https://raw.githubusercontent.com/sophowo/aurora-test/master/testingcontent.index" />
 		</update>
 	</info>
 	<files>
