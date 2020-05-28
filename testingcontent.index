@@ -8,6 +8,6 @@
 		</update>
 	</info>
 	<files>
-		<file name="test3.xml" url="https://raw.githubusercontent.com/sophowo/aurora-test/master/test3.xml" />
+		<file name="test3.xml" url="https://raw.githubusercontent.com/sophowo/aurora-test/master/testers/test3.xml" />
 	</files>
 </index>
