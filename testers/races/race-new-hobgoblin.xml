@@ -30,6 +30,7 @@
 			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet.</p>
 			<p class="indent"><strong><em>Darkvision.</em></strong> Your ancestry living in shadowy tundras and bleak caves has improved your vision in dark conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern colour in darkness, only shades of grey.</p>
 			<p class="indent"><strong><em>Tradition of Conflict.</em></strong> Hobgoblins have a strict military structure, and each member is educated in the history of war. Whenever you make a History check related to the military history of an object or place, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.</p>
+			<p class="indent"><strong><em>Limitless Energy.</em></strong> The harsh conditions of upbringing have left you with unmatched stamina. You have advantage on saving throws against becoming exhausted caused by environmental effects, such as harsh weather or heavy work. Saving throws caused by other sources such as creatures or magic items are unaffected. Additionally, once per long rest you can use a Bonus Action to ignore all effects of exhaustion currently affecting you for 1 minute.</p>
 			<p class="indent"><strong><em>Will to Persevere.</em></strong> Your grit to carry on and push through opposing forces makes it difficult to stop you from fighting. You can spend any number of hit dice up to your constitution modifier (minimum 1) to add 1d4 per hit die to any saving throw you make. You can use this ability after seeing the roll but before the DM tells you if you fail or succeed. After using this ability, you can’t use it again until you finish a long rest.</p>
 			<p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write Common and Goblin.</p>
 			<p class="indent"><strong><em>Subrace.</em></strong>Hobgoblins form tightly-knit clans together, bound by their shared talents. Those clans then merge to form tribes and societies. You choose to join a Martial Clan or an Arcana Clan.</p>
@@ -52,6 +53,7 @@
 			<grant type="Language" id="ID_LANGUAGE_COMMON" />
 			<grant type="Language" id="ID_LANGUAGE_GOBLIN" />
 			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_TRADITION_OF_CONFLICT" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_LIMITLESS_ENERGY" />
 			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_WILL_TO_PERSEVERE" />
 			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_HOBGOBLIN_IMPROVED_SUBRACE" />
 		</rules>
@@ -69,6 +71,14 @@
 			<stat name="Tradition_Of_Conflict:check" value="proficiency" />
 			<stat name="Tradition_Of_Conflict:check" value="proficiency" />
 		</rules>
+	</element>
+	<element name="Limitless Energy" type="Racial Trait" source="Sophie's Work" id="ID_RACIAL_TRAIT_LIMITLESS_ENERGY">
+		<description>
+			<p>The harsh conditions of upbringing have left you with unmatched stamina. You have advantage on saving throws against becoming exhausted caused by environmental effects, such as harsh weather or heavy work. Saving throws caused by other sources such as creatures or magic items are unaffected. Additionally, once per long rest you can use a Bonus Action to ignore all effects of exhaustion currently affecting you for 1 minute.</p>
+		</description>
+		<sheet>
+			<description>The harsh conditions of upbringing have left you with unmatched stamina. You have advantage on saving throws against becoming exhausted caused by environmental effects, such as harsh weather or heavy work. Saving throws caused by other sources such as creatures or magic items are unaffected. Additionally, once per long rest you can use a Bonus Action to ignore all effects of exhaustion currently affecting you for 1 minute.</description>
+		</sheet>
 	</element>
 	<element name="Will to Persevere" type="Racial Trait" source="Sophie's Work" id="ID_RACIAL_TRAIT_WILL_TO_PERSEVERE">
 		<description>
