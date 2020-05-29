@@ -7,7 +7,7 @@
 		</update>
 	</info>
 
-	<element name="HobgoblinImproved" type="Race" source="Sophie's Work" id="ID_RACE_HOBGOBLIN_IMPROVED">
+	<element name="Hobgoblin Improved" type="Race" source="Sophie's Work" id="ID_RACE_HOBGOBLIN_IMPROVED">
 		<description>
 			<p class="flavor"> Hobgoblins are angry and like to fight awooooo. </p>
 			<h4>ANGERY</h4>
@@ -159,7 +159,7 @@
 			<description>You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it.</description>
 		</sheet>
 		<rules>
-			<select type="Spell" name="Wizard Cantrip (High Elf)" supports="Wizard&amp;&amp;0" />
+			<select type="Spell" name="Wizard Cantrip (Arcana Clan Hobgoblin)" supports="Wizard&amp;&amp;0" />
 		</rules>
 	</element>
 	<element name="War Magic" type="Racial Trait" source="Sophie's Work" id="ID_RACIAL_TRAIT_WAR_MAGIC">
