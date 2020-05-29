@@ -72,11 +72,15 @@
 	</element>
 	<element name="Will to Persevere" type="Racial Trait" source="Sophie's Work" id="ID_RACIAL_TRAIT_WILL_TO_PERSEVERE">
 		<description>
-			<p>Your grit to carry on and push through opposing forces makes it difficult to stop you from fighting. You can spend any number of hit dice up to your constitution modifier (minimum 1) to add 1d4 per hit die to any saving throw you make. You can use this ability after seeing the roll but before the DM tells you if you fail or succeed. After using this ability, you can’t use it again until you finish a long rest.</p>
+			<p>Your grit to carry on and push through opposing forces makes it difficult to stop you from fighting. You gain 1 additional HP per level.</p>
 		</description>
-		<sheet display="false">
-			<description>Your grit to carry on and push through opposing forces makes it difficult to stop you from fighting. You can spend any number of hit dice up to your constitution modifier (minimum 1) to add 1d4 per hit die to any saving throw you make. You can use this ability after seeing the roll but before the DM tells you if you fail or succeed. After using this ability, you can’t use it again until you finish a long rest.</description>
+		<sheet>
+			<description>Your hit points maximum increases by {{Will_To_Persevere:hp}}.</description>
 		</sheet>
+		<rules>
+			<stat name="tough:hp" value="level" />
+			<stat name="hp" value="tough:hp" />
+		</rules>
 	</element>
 	<element name="Hobgoblin Subrace" type="Racial Trait" source="Player’s Handbook" id="ID_RACIAL_TRAIT_HOBGOBLIN_IMPROVED_SUBRACE">
 		<description>
@@ -94,7 +98,7 @@
 			<p>Most hobgoblins train themselves in the art of war, strengthening their bodies whilst memorising tactics and learning strict discipline. The hobgoblins of the Martial Clans are considered to be amongst the finest soldiers, legendary for never routing or retreating until ordered to.</p>
 			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your score in your choice of Strength or Dexterity increases by 1.</p>
 			<p class="indent"><strong><em>Hobgoblin Weaponry.</em></strong> You gain proficiency with the Longbow, Longsword, and Shield.</p>
-			<p class="indent"><strong><em>Martial Prowess.</em></strong> When you hit with an attack, you can use a bonus action to single out that target for your allies. Until the end of your next turn, the first time an ally damages that enemy with an attack, they deal 1d6 additional damage. This damage increases to 2d6 at 5th level, 3d6 at 11th level, and 4d6 at 17th level. At 5th level, this ability becomes a free action. After using this ability, you can’t use it again until after a short rest; you may spend a hit die upon using this ability to allow you to use it regardless of the restriction.</p>
+			<p class="indent"><strong><em>Martial Prowess.</em></strong> Intense training has let you not only take hits better, but to strike back at your opponents. When an enemy hits you with a weapon attack, you use a reaction to rapidly adopt a defensive stance, reducing the damage you take by 1d4. Next round, you uncoil with the first weapon attack you make before moving, adding 1d4 to the damage. The reduction and damage increase to 2d4 at level 5, 3d4 at level 11, and 4d4 at level 17. After using this ability, you can’t use it again until after a short or long rest.</p>
 		</description>
 		<sheet display="false" />
 		<setters>
@@ -122,13 +126,13 @@
 	</element>
 	<element name="Martial Prowess" type="Racial Trait" source="Sophie's Work" id="ID_RACIAL_TRAIT_MARTIAL_PROWESS">
 		<description>
-			<p>When you hit with an attack, you can use a bonus action to single out that target for your allies. Until the end of your next turn, the first time an ally damages that enemy with an attack, they deal 1d6 additional damage. This damage increases to 2d6 at 5th level, 3d6 at 11th level, and 4d6 at 17th level. At 5th level, this ability becomes a free action. After using this ability, you can’t use it again until after a short rest; you may spend a hit die upon using this ability to allow you to use it regardless of the restriction.</p>
+			<p>Intense training has let you not only take hits better, but to strike back at your opponents. When an enemy hits you with a weapon attack, you use a reaction to rapidly adopt a defensive stance, reducing the damage you take by 1d4. Next round, you uncoil with the first weapon attack you make before moving, adding 1d4 to the damage. The reduction and damage increase to 2d4 at level 5, 3d4 at level 11, and 4d4 at level 17. After using this ability, you can’t use it again until after a short or long rest.</p>
 		</description>
 		<sheet>
-			<description>When you hit with an attack, you can use a bonus action to single out that target for your allies. Until the end of your next turn, the first time an ally damages that enemy with an attack, they deal 1d6 additional damage. After using this ability, you can’t use it again until after a short rest; you may spend a hit die upon using this ability to allow you to use it regardless of the restriction.</description>
-			<description level="5">When you hit with an attack, you can single out that target for your allies as a free action. Until the end of your next turn, the first time an ally damages that enemy with an attack, they deal 2d6 additional damage. After using this ability, you can’t use it again until after a short rest; you may spend a hit die upon using this ability to allow you to use it regardless of the restriction.</description>
-			<description level="11">When you hit with an attack, you can single out that target for your allies as a free action. Until the end of your next turn, the first time an ally damages that enemy with an attack, they deal 3d6 additional damage. After using this ability, you can’t use it again until after a short rest; you may spend a hit die upon using this ability to allow you to use it regardless of the restriction.</description>
-			<description level="17">When you hit with an attack, you can single out that target for your allies as a free action. Until the end of your next turn, the first time an ally damages that enemy with an attack, they deal 4d6 additional damage. After using this ability, you can’t use it again until after a short rest; you may spend a hit die upon using this ability to allow you to use it regardless of the restriction.</description>
+			<description>Intense training has let you not only take hits better, but to strike back at your opponents. When an enemy hits you with a weapon attack, you use a reaction to rapidly adopt a defensive stance, reducing the damage you take by 1d4. Next round, you uncoil with the first weapon attack you make before moving, adding 1d4 to the damage. After using this ability, you can’t use it again until after a short or long rest.</description>
+			<description level="5">Intense training has let you not only take hits better, but to strike back at your opponents. When an enemy hits you with a weapon attack, you use a reaction to rapidly adopt a defensive stance, reducing the damage you take by 2d4. Next round, you uncoil with the first weapon attack you make before moving, adding 2d4 to the damage. After using this ability, you can’t use it again until after a short or long rest.</description>
+			<description level="11"Intense training has let you not only take hits better, but to strike back at your opponents. When an enemy hits you with a weapon attack, you use a reaction to rapidly adopt a defensive stance, reducing the damage you take by 3d4. Next round, you uncoil with the first weapon attack you make before moving, adding 3d4 to the damage. After using this ability, you can’t use it again until after a short or long rest.</description>
+			<description level="17">Intense training has let you not only take hits better, but to strike back at your opponents. When an enemy hits you with a weapon attack, you use a reaction to rapidly adopt a defensive stance, reducing the damage you take by 4d4. Next round, you uncoil with the first weapon attack you make before moving, adding 4d4 to the damage. After using this ability, you can’t use it again until after a short or long rest.</description>
 		</sheet>
 	</element>
 
