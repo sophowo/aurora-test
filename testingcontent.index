@@ -8,7 +8,7 @@
 		</update>
 	</info>
 	<files>
-		<file name="test3.xml" url="https://raw.githubusercontent.com/sophowo/aurora-test/master/testers/test3.xml" />
+		<file name="test3.xml" url="https://raw.githubusercontent.com/sophowo/aurora-test/master/testers/items/itemtest.xml" />
 		<file name="race-new-hobgoblin.xml" url="https://raw.githubusercontent.com/sophowo/aurora-test/master/testers/races/race-new-hobgoblin.xml" />
 	</files>
 </index>
