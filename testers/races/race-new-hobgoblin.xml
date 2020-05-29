@@ -65,7 +65,7 @@
 			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
 		</rules>
 	</element>
-	<element name="Hobgoblin Subrace" type="Racial Trait" source="Player’s Handbook" id="ID_RACIAL_TRAIT_NEW_HOBGONLIN_SUBRACE">
+	<element name="Hobgoblin Subrace" type="Racial Trait" source="Player’s Handbook" id="ID_RACIAL_TRAIT_NEW_HOBGOBLIN_SUBRACE">
 		<description>
 			<p>The warlike hobgoblins divide into 2 types: the Martial Clade and the Arcanic Clade.</p>
 		</description>
