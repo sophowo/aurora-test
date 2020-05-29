@@ -126,6 +126,7 @@
 			<p class="indent"><strong><em>Ritual Crippling.</em></strong> Your base walking speed decreases to 25 feet.</p>
 			<p class="indent"><strong><em>Mask of the Wild.</em></strong> You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena.</p>
 			<p class="indent"><strong><em>Cruel Magic.</em></strong> You know the <em>eldritch blast</em> cantrip. When you reach 3rd level, you can cast the detect magic spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can also cast the fireball spell once with this trait and regain the ability to do so when you finish a long rest. Intelligence is your spellcasting ability for these spells.</p>
+		</description>
 		<sheet display="false" />
 		<setters>
 			<set name="height" modifier="2d10">4'9"</set>
