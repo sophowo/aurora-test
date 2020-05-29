@@ -71,7 +71,7 @@
 		</description>
 		<sheet display="false" />
 		<rules>
-			<select type="Sub Race" name="Hobgoblin Subrace" supports="New-Hobgoblin" />
+			<select type="Sub Race" name="Hobgoblin Subrace" supports="NewHobgoblin" />
 		</rules>
 	</element>
 
