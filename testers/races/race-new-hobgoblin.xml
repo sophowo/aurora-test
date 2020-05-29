@@ -172,7 +172,7 @@
 			<description level="5">You can cast each of Shield and Scorching Ray 1/long rest (Intelligence)</description>
 		</sheet>
 		<rules>
-			<grant type="Spell" id="ID_PHB_SHIELD" level="3" />
+			<grant type="Spell" id="ID_PHB_SPELL_SHIELD" level="3" />
 			<grant type="Spell" id="ID_PHB_SPELL_SCORCHING_RAY" level="5" />
 		</rules>
 	</element>
