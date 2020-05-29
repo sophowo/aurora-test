@@ -7,7 +7,7 @@
 		</update>
 	</info>
 
-	<element name="Hobgoblin Improved" type="Race" source="Sophie's Work" id="ID_RACE_HOBGOBLIN_IMPROVED">
+	<element name="HobgoblinImproved" type="Race" source="Sophie's Work" id="ID_RACE_HOBGOBLIN_IMPROVED">
 		<description>
 			<p class="flavor"> Hobgoblins are angry and like to fight awooooo. </p>
 			<h4>ANGERY</h4>
@@ -78,18 +78,18 @@
 			<description>Your grit to carry on and push through opposing forces makes it difficult to stop you from fighting. You can spend any number of hit dice up to your constitution modifier (minimum 1) to add 1d4 per hit die to any saving throw you make. You can use this ability after seeing the roll but before the DM tells you if you fail or succeed. After using this ability, you can’t use it again until you finish a long rest.</description>
 		</sheet>
 	</element>
-	<element name="Hobgoblin Subrace" type="Racial Trait" source="Player’s Handbook" id="ID_RACIAL_TRAIT_HOBGOBLIN_IMRPOVED_SUBRACE">
+	<element name="Hobgoblin Subrace" type="Racial Trait" source="Player’s Handbook" id="ID_RACIAL_TRAIT_HOBGOBLIN_IMPROVED_SUBRACE">
 		<description>
 			<p>Hobgoblin clans come in two major types: the Martial Clans, and the Arcana Clans. Choose one type to join.</p>
 		</description>
 		<sheet display="false" />
 		<rules>
-			<select type="Sub Race" name="Hobgoblin Subrace" supports="Hobgoblin Improved" />
+			<select type="Sub Race" name="Hobgoblin Subrace" supports="HobgoblinImproved" />
 		</rules>
 	</element>
 
 	<element name="Martial Clan" type="Sub Race" source="Sophie's Work" id="ID_SUB_RACE_MARTIAL_CLAN">
-		<supports>Hobgoblin Improved</supports>
+		<supports>HobgoblinImproved</supports>
 		<description>
 			<p>Most hobgoblins train themselves in the art of war, strengthening their bodies whilst memorising tactics and learning strict discipline. The hobgoblins of the Martial Clans are considered to be amongst the finest soldiers, legendary for never routing or retreating until ordered to.</p>
 			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your score in your choice of Strength or Dexterity increases by 1.</p>
@@ -133,7 +133,7 @@
 	</element>
 
 	<element name="Arcana Clan" type="Sub Race" source="Sophie's Work" id="ID_SUB_RACE_ARCANIC_CLAN">
-		<supports>Hobgoblin Improved</supports>
+		<supports>HobgoblinImproved</supports>
 		<description>
 			<p>A few uniquely talented hobgoblins instead learn the ways of the arcane, preferring to use magic instead of brute force. Hobgoblins of the Arcana Clans are not as highly respected amongst other races, often considered to be brutish, but within hobgoblin society they are often some of the highest-ranking members.</p>
 			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Intelligence score increases by 1.</p>
