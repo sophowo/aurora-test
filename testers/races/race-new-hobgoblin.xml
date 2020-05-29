@@ -33,7 +33,7 @@
 			<p class="indent"><strong><em>Limitless Energy.</em></strong> The harsh conditions of upbringing have left you with unmatched stamina. You have advantage on saving throws against becoming exhausted caused by environmental effects, such as harsh weather or heavy work. Saving throws caused by other sources such as creatures or magic items are unaffected. Additionally, once per long rest you can use a Bonus Action to ignore all effects of exhaustion currently affecting you for 1 minute.</p>
 			<p class="indent"><strong><em>Will to Persevere.</em></strong> Your grit to carry on and push through opposing forces makes it difficult to stop you from fighting. You can spend any number of hit dice up to your constitution modifier (minimum 1) to add 1d4 per hit die to any saving throw you make. You can use this ability after seeing the roll but before the DM tells you if you fail or succeed. After using this ability, you can’t use it again until you finish a long rest.</p>
 			<p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write Common and Goblin.</p>
-			<p class="indent"><strong><em>Subrace.</em></strong>Hobgoblins form tightly-knit clans together, bound by their shared talents. Those clans then merge to form tribes and societies. You choose to join a Martial Clan or an Arcana Clan.</p>
+			<p class="indent"><strong><em>Subrace.</em></strong> Hobgoblins form tightly-knit clans together, bound by their shared talents. Those clans then merge to form tribes and societies. You choose to join a Martial Clan or an Arcana Clan.</p>
 		</description>
 		<sheet display="false" />
 		<setters>
