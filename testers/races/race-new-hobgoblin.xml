@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<name>NewHobgoblin</name>
+		<name>Hobgoblin Improved</name>
 		<update version="0.2">
 			<file name="race-new-hobgoblin.xml" url="https://raw.githubusercontent.com/sophowo/aurora-test/master/testers/races/race-new-hobgoblin.xml" />
 		</update>
 	</info>
 
-	<element name="NewHobgoblin" type="Race" source="Sophie's Work" id="ID_RACE_NEW_HOBGOBLIN">
+	<element name="Hobgoblin Improved" type="Race" source="Sophie's Work" id="ID_RACE_HOBGOBLIN_IMPROVED">
 		<description>
 			<p class="flavor"> Hobgoblins are angry and like to fight awooooo. </p>
 			<h4>ANGERY</h4>
@@ -23,15 +23,16 @@
 			</p>
 			<h4>NEW HOBGOBLIN TRAITS</h4>
 			<p>Your hobgoblin character has a variety of natural abilities, the result of thousands of years of hobgoblin refinement.</p>
-			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Constitution score increases by 1.</p>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Constitution score increases by 2.</p>
 			<p class="indent"><strong><em>Age.</em></strong> Although hobgoblins reach physical maturity at about the same age as humans, they die at like 30 lmao.</p>
-			<p class="indent"><strong><em>Alignment.</em></strong> Hobgoblins are super lawful and often Neutral or Evil.</p>
+			<p class="indent"><strong><em>Alignment.</em></strong> Hobgoblins are incredibly lawful, having great respect for their heirachies and societal structures. Most new hobgoblin societies are Neutral, trying to integrate with the rest of the world, but many older socities trend closer to Evil.</p>
 			<p class="indent"><strong><em>Size.</em></strong> Hobgoblins stand taller than humans. Your size is Medium.</p>
 			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet.</p>
-			<p class="indent"><strong><em>Darkvision.</em></strong> Training in caves has given you darkvision. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.</p>
-			<p class="indent"><strong><em>Hardy Survivor.</em></strong> You have proficiency in the Survival skill.</p>
+			<p class="indent"><strong><em>Darkvision.</em></strong> Your ancestry living in shadowy tundras and bleak caves has improved your vision in dark conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern colour in darkness, only shades of grey.</p>
+			<p class="indent"><strong><em>Tradition of Conflict.</em></strong> Hobgoblins have a strict military structure, and each member is educated in the history of war. Whenever you make a History check related to the military history of an object or place, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.</p>
+			<p class="indent"><strong><em>Will to Persevere.</em></strong> Your grit to carry on and push through opposing forces makes it difficult to stop you from fighting. You can spend any number of hit dice up to your constitution modifier (minimum 1) to add 1d4 per hit die to any saving throw you make. You can use this ability after seeing the roll but before the DM tells you if you fail or succeed. After using this ability, you can’t use it again until you finish a long rest.</p>
 			<p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write Common and Goblin.</p>
-			<p class="indent"><strong><em>Subrace.</em></strong> Ancient divides among the elven people resulted in two main subraces: the Martial Clade, and the Arcanic Clade. Choose one of these subraces.</p>
+			<p class="indent"><strong><em>Subrace.</em></strong>Hobgoblins form tightly-knit clans together, bound by their shared talents. Those clans then merge to form tribes and societies. You choose to join a Martial Clan or an Arcana Clan.</p>
 		</description>
 		<sheet display="false" />
 		<setters>
@@ -44,44 +45,56 @@
 			<set name="weight" modifier="1d4">115 lb.</set>
 		</setters>
 		<rules>
-			<stat name="constitution" value="1"  />
+			<stat name="constitution" value="2"  />
 			<stat name="innate speed" value="30" bonus="base" />
 			<grant type="Size" id="ID_SIZE_MEDIUM" />
 			<grant type="Vision" id="ID_VISION_DARKVISION" />
 			<grant type="Language" id="ID_LANGUAGE_COMMON" />
 			<grant type="Language" id="ID_LANGUAGE_GOBLIN" />
-			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_HARDY_SURVIVOR" />
-			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_NEW_HOBGOBLIN_SUBRACE" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_TRADITION_OF_CONFLICT" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_WILL_TO_PERSEVERE" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_HOBGOBLIN_IMPROVED_SUBRACE" />
 		</rules>
 	</element>
-	<element name="Hardy Survivor" type="Racial Trait" source="Sophie's Work" id="ID_RACIAL_TRAIT_HARDY_SURVIVOR">
+	<element name="Tradition of Conflict" type="Racial Trait" source="Sophie's Work" id="ID_RACIAL_TRAIT_TRADITION_OF_CONFLICT">
 		<description>
-			<p>You have proficiency in the Survival skill.</p>
+			<p>Hobgoblins have a strict military structure, and each member is educated in the history of war. Whenever you make a History check related to the military history of an object or place, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.</p>
 		</description>
-		<sheet display="false">
-			<description>You have proficiency in the Survival skill.</description>
+		<sheet>
+			<description>A +{{Tradition_Of_Conflict:check}} on History checks related to the millitary history of an object or place .</description>
 		</sheet>
 		<rules>
-			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
+			<stat name="Tradition_Of_Conflict:check" value="intelligence:modifier" />
+			<stat name="Tradition_Of_Conflict:check" value="history:misc" />
+			<stat name="Tradition_Of_Conflict:check" value="proficiency" />
+			<stat name="Tradition_Of_Conflict:check" value="proficiency" />
 		</rules>
 	</element>
-	<element name="Hobgoblin Subrace" type="Racial Trait" source="Player’s Handbook" id="ID_RACIAL_TRAIT_NEW_HOBGOBLIN_SUBRACE">
+	<element name="Will to Persevere" type="Racial Trait" source="Sophie's Work" id="ID_RACIAL_TRAIT_WILL_TO_PERSEVERE">
 		<description>
-			<p>The warlike hobgoblins divide into 2 types: the Martial Clade and the Arcanic Clade.</p>
+			<p>Your grit to carry on and push through opposing forces makes it difficult to stop you from fighting. You can spend any number of hit dice up to your constitution modifier (minimum 1) to add 1d4 per hit die to any saving throw you make. You can use this ability after seeing the roll but before the DM tells you if you fail or succeed. After using this ability, you can’t use it again until you finish a long rest.</p>
+		</description>
+		<sheet display="false" />
+			<description>Your grit to carry on and push through opposing forces makes it difficult to stop you from fighting. You can spend any number of hit dice up to your constitution modifier (minimum 1) to add 1d4 per hit die to any saving throw you make. You can use this ability after seeing the roll but before the DM tells you if you fail or succeed. After using this ability, you can’t use it again until you finish a long rest.</description>
+		</sheet>
+	</element>
+	<element name="Hobgoblin Subrace" type="Racial Trait" source="Player’s Handbook" id="ID_RACIAL_TRAIT_HOBGOBLIN_IMRPOVED_SUBRACE">
+		<description>
+			<p>Hobgoblin clans come in two major types: the Martial Clans, and the Arcana Clans. Choose one type to join.</p>
 		</description>
 		<sheet display="false" />
 		<rules>
-			<select type="Sub Race" name="Hobgoblin Subrace" supports="NewHobgoblin" />
+			<select type="Sub Race" name="Hobgoblin Subrace" supports="Hobgoblin Improved" />
 		</rules>
 	</element>
 
-	<element name="Martial Clade" type="Sub Race" source="Player’s Handbook" id="ID_SUB_RACE_MARTIAL_CLADE">
-		<supports>NewHobgoblin</supports>
+	<element name="Martial Clan" type="Sub Race" source="Sophie's Work" id="ID_SUB_RACE_MARTIAL_CLAN">
+		<supports>Hobgoblin Improved</supports>
 		<description>
-			<p>The Martial Clade focus on physical might and agility to help overpower opponents in combat.</p>
-			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Strength score increases by 2.</p>
-			<p class="indent"><strong><em>Hobgoblin War Training.</em></strong> You have proficiency with shields and the greataxe.</p>
-			<p class="indent"><strong><em>Cantrip.</em></strong> You know one cantrip of your choice from the cleric spell list. Intelligence is your spellcasting ability for it.</p>
+			<p>Most hobgoblins train themselves in the art of war, strengthening their bodies whilst memorising tactics and learning strict discipline. The hobgoblins of the Martial Clans are considered to be amongst the finest soldiers, legendary for never routing or retreating until ordered to.</p>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your score in your choice of Strength or Dexterity increases by 1.</p>
+			<p class="indent"><strong><em>Hobgoblin Weaponry.</em></strong> You gain proficiency with the Longbow, Longsword, and Shield.</p>
+			<p class="indent"><strong><em>Martial Prowess.</em></strong> When you hit with an attack, you can use a bonus action to single out that target for your allies. Until the end of your next turn, the first time an ally damages that enemy with an attack, they deal 1d6 additional damage. This damage increases to 2d6 at 5th level, 3d6 at 11th level, and 4d6 at 17th level. At 5th level, this ability becomes a free action. After using this ability, you can’t use it again until after a short rest; you may spend a hit die upon using this ability to allow you to use it regardless of the restriction.</p>
 		</description>
 		<sheet display="false" />
 		<setters>
@@ -89,43 +102,43 @@
 			<set name="weight" modifier="1d4">115 lb.</set>
 		</setters>
 		<rules>
-			<stat name="strength" value="2" />
-			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_HOBGOBLIN_WAR_TRAINING" />
-			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_CANTRIP_CLERIC" />
+			<select type="Ability Score Improvement" name="Ability Score Increase (Hobgoblin - Martial Clan)" supports="ID_PHB_FEAT_ASI_STRENGTH|ID_PHB_FEAT_ASI_DEXTERITY" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_HOBGOBLIN_WEAPONRY" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_MARTIAL_PROWESS" />
 		</rules>
 	</element> 	
-	<element name="Hobgoblin War Training" type="Racial Trait" source="Sophie's Work" id="ID_RACIAL_TRAIT_HOBGOBLIN_WAR_TRAINING">
+	<element name="Hobgoblin Weaponry" type="Racial Trait" source="Sophie's Work" id="ID_RACIAL_TRAIT_HOBGOBLIN_WEAPONRY">
 		<description>
 			<p>You have proficiency with shields and the greataxe.</p>
 		</description>
 		<sheet display="false">
-			<description>You have proficiency with heavy armour and the greataxe.</description>
+			<description>You gain proficiency with the Longbow, Longsword, and Shield.</description>
 		</sheet>
 		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_LONGBOW" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_LONGSWORD" />
 			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELD" />
-			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_GREATAXE" />
 		</rules>
 	</element>
-	<element name="Cantrip" type="Racial Trait" source="Sophie's Work" id="ID_RACIAL_TRAIT_CANTRIP_CLERIC">
+	<element name="Martial Prowess" type="Racial Trait" source="Sophie's Work" id="ID_RACIAL_TRAIT_MARTIAL_PROWESS">
 		<description>
-			<p>You know one cantrip of your choice from the cleric spell list. Intelligence is your spellcasting ability for it.</p>
+			<p>When you hit with an attack, you can use a bonus action to single out that target for your allies. Until the end of your next turn, the first time an ally damages that enemy with an attack, they deal 1d6 additional damage. This damage increases to 2d6 at 5th level, 3d6 at 11th level, and 4d6 at 17th level. At 5th level, this ability becomes a free action. After using this ability, you can’t use it again until after a short rest; you may spend a hit die upon using this ability to allow you to use it regardless of the restriction.</p>
 		</description>
-		<sheet display="false">
-			<description>You know one cantrip of your choice from the cleric spell list. Intelligence is your spellcasting ability for it.</description>
+		<sheet>
+			<description>When you hit with an attack, you can use a bonus action to single out that target for your allies. Until the end of your next turn, the first time an ally damages that enemy with an attack, they deal 1d6 additional damage. After using this ability, you can’t use it again until after a short rest; you may spend a hit die upon using this ability to allow you to use it regardless of the restriction.</description>
+			<description level="5">When you hit with an attack, you can single out that target for your allies as a free action. Until the end of your next turn, the first time an ally damages that enemy with an attack, they deal 2d6 additional damage. After using this ability, you can’t use it again until after a short rest; you may spend a hit die upon using this ability to allow you to use it regardless of the restriction.</description>
+			<description level="11">When you hit with an attack, you can single out that target for your allies as a free action. Until the end of your next turn, the first time an ally damages that enemy with an attack, they deal 3d6 additional damage. After using this ability, you can’t use it again until after a short rest; you may spend a hit die upon using this ability to allow you to use it regardless of the restriction.</description>
+			<description level="17">When you hit with an attack, you can single out that target for your allies as a free action. Until the end of your next turn, the first time an ally damages that enemy with an attack, they deal 4d6 additional damage. After using this ability, you can’t use it again until after a short rest; you may spend a hit die upon using this ability to allow you to use it regardless of the restriction.</description>
 		</sheet>
-		<rules>
-			<select type="Spell" name="Cleric Cantrip (Martial Clade)" supports="Cleric&amp;&amp;0" />
-		</rules>
 	</element>
 
-	<element name="Arcanic Clade" type="Sub Race" source="Sophie's Work" id="ID_SUB_RACE_ARCANIC_CLADE">
-		<supports>NewHobgoblin</supports>
+	<element name="Arcana Clan" type="Sub Race" source="Sophie's Work" id="ID_SUB_RACE_ARCANIC_CLAN">
+		<supports>Hobgoblin Improved</supports>
 		<description>
-			<p>The Arcanic Clade provide magical support to the Martial Clade.</p>
-			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Intelligence score increases by 2.</p>
-			<p class="indent"><strong><em>Ritual Crippling.</em></strong> Your base walking speed decreases to 25 feet.</p>
-			<p class="indent"><strong><em>Mask of the Wild.</em></strong> You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena.</p>
-			<p class="indent"><strong><em>Cruel Magic.</em></strong> You know the <em>eldritch blast</em> cantrip. When you reach 3rd level, you can cast the detect magic spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can also cast the fireball spell once with this trait and regain the ability to do so when you finish a long rest. Intelligence is your spellcasting ability for these spells.</p>
+			<p>A few uniquely talented hobgoblins instead learn the ways of the arcane, preferring to use magic instead of brute force. Hobgoblins of the Arcana Clans are not as highly respected amongst other races, often considered to be brutish, but within hobgoblin society they are often some of the highest-ranking members.</p>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Intelligence score increases by 1.</p>
+			<p class="indent"><strong><em>Cantrip</em></strong> You learn a wizard cantrip of your choice. Intelligence is your spellcasting ability for it.</p>
+			<p class="indent"><strong><em>War Magic</em></strong> At 3rd level, you can cast each of the Shield and Magic Missile spells at 1st level. Intelligence is your spellcasting ability for it. After doing so, you cannot use this ability again until you finish a long rest.</p>
 		</description>
 		<sheet display="false" />
 		<setters>
@@ -133,44 +146,34 @@
 			<set name="weight" modifier="1d4">115 lb.</set>
 		</setters>
 		<rules>
-			<stat name="intelligence" value="2" />
-			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_RITUAL_CRIPPLING" />
-			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_MASK_OF_THE_WILD" />
-			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_CRUEL_MAGIC" />
+			<stat name="intelligence" value="1" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_CANTRIP" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_WAR_MAGIC" />
 		</rules>
 	</element>
-	<element name="Ritual Crippling" type="Racial Trait" source="Sophie's Work" id="ID_RACIAL_TRAIT_RITUAL_CRIPPLING">
+	<element name="Cantrip" type="Racial Trait" source="Player’s Handbook" id="ID_RACIAL_TRAIT_CANTRIP">
 		<description>
-			<p>Your base walking speed decreases to 25 feet.</p>
+			<p>You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it.</p>
 		</description>
 		<sheet display="false">
-			<description>Your speed decreases to 25 feet.</description>
+			<description>You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it.</description>
 		</sheet>
 		<rules>
-			<stat name="innate speed" value="25" bonus="base" />
+			<select type="Spell" name="Wizard Cantrip (High Elf)" supports="Wizard&amp;&amp;0" />
 		</rules>
 	</element>
-	<element name="Mask of the Wild" type="Racial Trait" source="Sophie's Work" id="ID_RACIAL_TRAIT_MASK_OF_THE_WILD">
+	<element name="War Magic" type="Racial Trait" source="Sophie's Work" id="ID_RACIAL_TRAIT_WAR_MAGIC">
 		<description>
-			<p>You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena.</p>
+			<p>At 3rd level, you can cast Shield at 1st level. At 5th level, you can also cast Scorching Ray at 2nd level. Intelligence is your spellcasting ability for it. After doing so, you cannot use this ability again until you finish a long rest.</p>
 		</description>
 		<sheet>
-			<description>You can attempt to hide even when you are only lightly obscured.</description>
-		</sheet>
-	</element>
-	<element name="Cruel Magic" type="Racial Trait" source="Sophie's Work" id="ID_RACIAL_TRAIT_CRUEL_MAGIC">
-		<description>
-			<p>You know the <em>eldritch blast</em> cantrip. When you reach 3rd level, you can cast the detect magic spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can also cast the fireball spell once with this trait and regain the ability to do so when you finish a long rest. Intelligence is your spellcasting ability for these spells.</p>
-		</description>
-		<sheet>
-			<description>You know the eldritch blast cantrip. (Intelligence)</description>
-			<description level="3">You know the eldritch blast cantrip. You can cast Detect Magic 1/long rest. (Intelligence)</description>
-			<description level="5">You know the eldritch blast cantrip. You can cast Detect Magic and Fireball 1/long rest. (Intelligence)</description>
+			<description>You can cast Shield 1/long rest. (Intelligence)</description>
+			<description level="3">You can cast Shield 1/long rest (Intelligence)</description>
+			<description level="5">You can cast each of Shield and Scorching Ray 1/long rest (Intelligence)</description>
 		</sheet>
 		<rules>
-			<grant type="Spell" id="ID_PHB_SPELL_ELDRITCH_BLAST" level="1" />
-			<grant type="Spell" id="ID_PHB_SPELL_DETECT_MAGIC" level="3" />
-			<grant type="Spell" id="ID_PHB_SPELL_FIREBALL" level="5" />
+			<grant type="Spell" id="ID_PHB_SHIELD" level="3" />
+			<grant type="Spell" id="ID_PHB_SPELL_SCORCHING_RAY" level="5" />
 		</rules>
 	</element>
 </elements>
