@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>NewHobgoblin</name>
+		<update version="0.2">
+			<file name="race-new-hobgoblin.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/races/race-elf.xml" />
+		</update>
+	</info>
+
+	<element name="NewHobgoblin" type="Race" source="Sophie's Work" id="ID_RACE_NEW_HOBGOBLIN">
+		<description>
+			<p class="flavor"> Hobgoblins are angry and like to fight awooooo. </p>
+			<h4>ANGERY</h4>
+			<p>Hobgoblins look permenantly angry. They are usually red.</p>
+			<span class="feature">Child Names:</span>grrrr, mrrrrrrr, grrgrrrr, arrrrgrrrr.<br />
+			<span class="feature">Male Adult Names:</span>hannnggggggrrrrr, baannnnngggrrrrrr, sllllannnnggerrrrr.<br />
+			<span class="feature">Female Adult Names:</span>awooooo, bawoooooo, lawooooo.<br />
+			<span class="feature">Family Names (Common Translations):</span>gah'rogg, hall'vanor
+			</p>
+			<h4>NEW HOBGOBLIN TRAITS</h4>
+			<p>Your hobgoblin character has a variety of natural abilities, the result of thousands of years of hobgoblin refinement.</p>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Constitution score increases by 1.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Although hobgoblins reach physical maturity at about the same age as humans, they die at like 30 lmao.</p>
+			<p class="indent"><strong><em>Alignment.</em></strong> Hobgoblins are super lawful and often Neutral or Evil.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Hobgoblins stand taller than humans. Your size is Medium.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet.</p>
+			<p class="indent"><strong><em>Darkvision.</em></strong> Training in caves has given you darkvision. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.</p>
+			<p class="indent"><strong><em>Hardy Survivor.</em></strong> You have proficiency in the Survival skill.</p>
+			<p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write Common and Goblin.</p>
+			<p class="indent"><strong><em>Subrace.</em></strong> Ancient divides among the elven people resulted in two main subraces: the Martial Clade, and the Arcanic Clade. Choose one of these subraces.</p>
+		</description>
+		<sheet display="false" />
+		<setters>
+			<set name="names" type="male">hannnggggggrrrrr, baannnnngggrrrrrr, sllllannnnggerrrrr</set>
+			<set name="names" type="female">awooooo, bawoooooo, lawooooo</set>
+			<set name="names" type="child">grrrr, mrrrrrrr, grrgrrrr, arrrrgrrrr</set>
+			<set name="names" type="family">gah'rogg, hall'vanor</set>
+			<set name="names-format">{{name}} {{family}}</set>
+			<set name="height" modifier="2d10">4'9"</set>
+			<set name="weight" modifier="1d4">115 lb.</set>
+		</setters>
+		<rules>
+			<stat name="constitution" value="1"  />
+			<stat name="innate speed" value="30" bonus="base" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" />
+			<grant type="Language" id="ID_LANGUAGE_GOBLIN" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_HARDY_SURVIVOR" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_NEW_HOBGONLIN_SUBRACE" />
+		</rules>
+	</element>
+	<element name="Hardy Survivor" type="Racial Trait" source="Sophie's Work" id="ID_RACIAL_TRAIT_HARDY_SURVIVOR">
+		<description>
+			<p>You have proficiency in the Survival skill.</p>
+		</description>
+		<sheet display="false">
+			<description>You have proficiency in the Survival skill.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
+		</rules>
+	</element>
+	<element name="Hobgoblin Subrace" type="Racial Trait" source="Player’s Handbook" id="ID_RACIAL_TRAIT_NEW_HOBGONLIN_SUBRACE">
+		<description>
+			<p>The warlike hobgoblins divide into 2 types: the Martial Clade and the Arcanic Clade.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Sub Race" name="Hobgoblin Subrace" supports="New-Hobgoblin" />
+		</rules>
+	</element>
+
+	<element name="Martial Clade" type="Sub Race" source="Player’s Handbook" id="ID_SUB_RACE_MARTIAL_CLADE">
+		<supports>NewHobgoblin</supports>
+		<description>
+			<p>The Martial Clade focus on physical might and agility to help overpower opponents in combat.</p>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Strength score increases by 2.</p>
+			<p class="indent"><strong><em>Hobgoblin War Training.</em></strong> You have proficiency with shields and the greataxe.</p>
+			<p class="indent"><strong><em>Cantrip.</em></strong> You know one cantrip of your choice from the cleric spell list. Intelligence is your spellcasting ability for it.</p>
+		</description>
+		<sheet display="false" />
+		<setters>
+			<set name="height" modifier="2d10">4'9"</set>
+			<set name="weight" modifier="1d4">115 lb.</set>
+		</setters>
+		<rules>
+			<stat name="strength" value="2" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_HOBGOBLIN_WAR_TRAINING" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_CANTRIP_CLERIC" />
+		</rules>
+	</element> 	
+	<element name="Hobgoblin War Training" type="Racial Trait" source="Sophie's Work" id="ID_RACIAL_TRAIT_HOBGOBLIN_WAR_TRAINING">
+		<description>
+			<p>You have proficiency with shields and the greataxe.</p>
+		</description>
+		<sheet display="false">
+			<description>You have proficiency with heavy armour and the greataxe.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELD" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_GREATAXE" />
+		</rules>
+	</element>
+	<element name="Cantrip" type="Racial Trait" source="Sophie's Work" id="ID_RACIAL_TRAIT_CANTRIP_CLERIC">
+		<description>
+			<p>You know one cantrip of your choice from the cleric spell list. Intelligence is your spellcasting ability for it.</p>
+		</description>
+		<sheet display="false">
+			<description>You know one cantrip of your choice from the cleric spell list. Intelligence is your spellcasting ability for it.</description>
+		</sheet>
+		<rules>
+			<select type="Spell" name="Cleric Cantrip (Martial Clade)" supports="Cleric&amp;&amp;0" />
+		</rules>
+	</element>
+
+	<element name="Arcanic Clade" type="Sub Race" source="Sophie's Work" id="ID_SUB_RACE_ARCANIC_CLADE">
+		<supports>NewHobgoblin</supports>
+		<description>
+			<p>The Arcanic Clade provide magical support to the Martial Clade.</p>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Intelligence score increases by 2.</p>
+			<p class="indent"><strong><em>Ritual Crippling.</em></strong> Your base walking speed decreases to 25 feet.</p>
+			<p class="indent"><strong><em>Mask of the Wild.</em></strong> You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena.</p>
+			<p class="indent"><strong><em>Cruel Magic.</em></strong> You know the <em>eldritch blast</em> cantrip. When you reach 3rd level, you can cast the detect magic spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can also cast the fireball spell once with this trait and regain the ability to do so when you finish a long rest. Intelligence is your spellcasting ability for these spells.</p>
+		<sheet display="false" />
+		<setters>
+			<set name="height" modifier="2d10">4'9"</set>
+			<set name="weight" modifier="1d4">115 lb.</set>
+		</setters>
+		<rules>
+			<stat name="intelligence" value="2" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_RITUAL_CRIPPLING" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_MASK_OF_THE_WILD" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_CRUEL_MAGIC" />
+		</rules>
+	</element>
+	<element name="Ritual Crippling" type="Racial Trait" source="Sophie's Work" id="ID_RACIAL_TRAIT_RITUAL_CRIPPLING">
+		<description>
+			<p>Your base walking speed decreases to 25 feet.</p>
+		</description>
+		<sheet display="false">
+			<description>Your speed decreases to 25 feet.</description>
+		</sheet>
+		<rules>
+			<stat name="innate speed" value="25" bonus="base" />
+		</rules>
+	</element>
+	<element name="Mask of the Wild" type="Racial Trait" source="Sophie's Work" id="ID_RACIAL_TRAIT_MASK_OF_THE_WILD">
+		<description>
+			<p>You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena.</p>
+		</description>
+		<sheet>
+			<description>You can attempt to hide even when you are only lightly obscured.</description>
+		</sheet>
+	</element>
+	<element name="Cruel Magic" type="Racial Trait" source="Sophie's Work" id="ID_RACIAL_TRAIT_CRUEL_MAGIC">
+		<description>
+			<p>You know the <em>eldritch blast</em> cantrip. When you reach 3rd level, you can cast the detect magic spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can also cast the fireball spell once with this trait and regain the ability to do so when you finish a long rest. Intelligence is your spellcasting ability for these spells.</p>
+		</description>
+		<sheet>
+			<description>You know the eldritch blast cantrip. (Intelligence)</description>
+			<description level="3">You know the eldritch blast cantrip. You can cast Detect Magic 1/long rest. (Intelligence)</description>
+			<description level="5">You know the eldritch blast cantrip. You can cast Detect Magic and Fireball 1/long rest. (Intelligence)</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_ELDRITCH_BLAST" level="1" />
+			<grant type="Spell" id="ID_PHB_SPELL_DETECT_MAGIC" level="3" />
+			<grant type="Spell" id="ID_PHB_SPELL_FIREBALL" level="5" />
+		</rules>
+	</element>
