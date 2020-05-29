@@ -88,8 +88,8 @@
 			<description>Your hit points maximum increases by {{Will_To_Persevere:hp}}.</description>
 		</sheet>
 		<rules>
-			<stat name="tough:hp" value="level" />
-			<stat name="hp" value="tough:hp" />
+			<stat name="Will_To_Persevere:hp" value="level" />
+			<stat name="hp" value="Will_To_Persevere:hp" />
 		</rules>
 	</element>
 	<element name="Hobgoblin Subrace" type="Racial Trait" source="Player’s Handbook" id="ID_RACIAL_TRAIT_HOBGOBLIN_IMPROVED_SUBRACE">
@@ -151,8 +151,8 @@
 		<description>
 			<p>A few uniquely talented hobgoblins instead learn the ways of the arcane, preferring to use magic instead of brute force. Hobgoblins of the Arcana Clans are not as highly respected amongst other races, often considered to be brutish, but within hobgoblin society they are often some of the highest-ranking members.</p>
 			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Intelligence score increases by 1.</p>
-			<p class="indent"><strong><em>Cantrip</em></strong> You learn a wizard cantrip of your choice. Intelligence is your spellcasting ability for it.</p>
-			<p class="indent"><strong><em>War Magic</em></strong> At 3rd level, you can cast each of the Shield and Magic Missile spells at 1st level. Intelligence is your spellcasting ability for it. After doing so, you cannot use this ability again until you finish a long rest.</p>
+			<p class="indent"><strong><em>Cantrip.</em></strong> You learn a wizard cantrip of your choice. Intelligence is your spellcasting ability for it.</p>
+			<p class="indent"><strong><em>War Magic.</em></strong> At 3rd level, you can cast Shield at 1st level. At 5th level, you can also cast Scorching Ray at 2nd level. Intelligence is your spellcasting ability for it. After doing so, you cannot use this ability again until you finish a long rest.</p>
 		</description>
 		<sheet display="false" />
 		<setters>
