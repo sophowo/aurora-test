@@ -3,7 +3,7 @@
 	<info>
 		<name>Testing Content</name>
 		<description>I test things.</description>
-		<update version="0.10">
+		<update version="0.20">
 			<file name="testingcontent.index" url="https://raw.githubusercontent.com/sophowo/aurora-test/master/testingcontent.index" />
 		</update>
 	</info>
