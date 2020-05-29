@@ -51,7 +51,7 @@
 			<grant type="Language" id="ID_LANGUAGE_COMMON" />
 			<grant type="Language" id="ID_LANGUAGE_GOBLIN" />
 			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_HARDY_SURVIVOR" />
-			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_NEW_HOBGONLIN_SUBRACE" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_NEW_HOBGOBLIN_SUBRACE" />
 		</rules>
 	</element>
 	<element name="Hardy Survivor" type="Racial Trait" source="Sophie's Work" id="ID_RACIAL_TRAIT_HARDY_SURVIVOR">
