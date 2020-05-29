@@ -62,7 +62,7 @@
 		</description>
 		<sheet>
 			<description>A +{{Tradition_Of_Conflict:check}} on History checks related to the millitary history of an object or place .</description>
-		</sheet>
+		</sheet>	
 		<rules>
 			<stat name="Tradition_Of_Conflict:check" value="intelligence:modifier" />
 			<stat name="Tradition_Of_Conflict:check" value="history:misc" />
@@ -74,7 +74,7 @@
 		<description>
 			<p>Your grit to carry on and push through opposing forces makes it difficult to stop you from fighting. You can spend any number of hit dice up to your constitution modifier (minimum 1) to add 1d4 per hit die to any saving throw you make. You can use this ability after seeing the roll but before the DM tells you if you fail or succeed. After using this ability, you can’t use it again until you finish a long rest.</p>
 		</description>
-		<sheet display="false" />
+		<sheet display="false">
 			<description>Your grit to carry on and push through opposing forces makes it difficult to stop you from fighting. You can spend any number of hit dice up to your constitution modifier (minimum 1) to add 1d4 per hit die to any saving throw you make. You can use this ability after seeing the roll but before the DM tells you if you fail or succeed. After using this ability, you can’t use it again until you finish a long rest.</description>
 		</sheet>
 	</element>
