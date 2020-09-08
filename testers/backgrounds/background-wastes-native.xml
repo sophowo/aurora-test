@@ -51,10 +51,8 @@
 			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ATHLETICS" />
 			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
 			<grant type="Proficiency" id="ID_WOTC_PHB_ITEM_TOOL_COOKS_UTENSILS" />
-			<select type="Language" name="Language (Tundra Native)" supports="Standard||Exotic" /> requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE" />
-			<grant type="Background Feature" id="ID_BACKGROUND_FEATURE_TUNDRA_EXPERTISE" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE" />
-			<select type="Background Variant" name="Variant Wastes Native" supports="Variant Wastes Native" optional="true" />
-			<select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+			<select type="Language" name="Language (Tundra Native)" supports="Standard||Exotic" />
+			<grant type="Background Feature" id="ID_BACKGROUND_FEATURE_TUNDRA_EXPERTISE" />
 			<select name="Tribal Role" type="List" optional="true">
 				<item id="1">Political leaders and chieftains</item>
 				<item id="2">Religious figureheads</item>
@@ -112,29 +110,8 @@
 			<p> As someone that spent years on the tundras, you've grown accustomed to their unique challenges. You can spot the signs of an incoming snowstorm or blizzard before it happens, and when foraging for food on the tundra, you can find twice as much. Whilst enganged in other activites such as foraging or navigating, you remain alert to danger.</p>
 			<p class="indent">Community is everything in the Wastes. Your settlement, and any others they have a good relationship with, will provide you with lodging and food if necessary. Settlements can send messages to others via expert messengers, allowing you some communication if it's unsafe for you to travel across the tundra.</p>
 			<p class="indent">You must contribute to the community, if able. Neglecting your duties may result in the settlements turning against you and refusing you entry inside.</p>
-      <p class="indent">You are also fluent in Snowtalk, a purely physical method of communication used on the tundras when voice cannot. Snowtalk can convery simple concepts, such as a path being blocked by a snowdrift or a member of the party being injured, but cannot communicate more sophisticated ideas. Only other creatures fluent in Snowtalk can understand these messages, and they take twice as long to convey as they would if spoken in common. A creature can understand a snowtalk message as long as they can see your silhouette.</p>
+      			<p class="indent">You are also fluent in Snowtalk, a purely physical method of communication used on the tundras when voice cannot. Snowtalk can convery simple concepts, such as a path being blocked by a snowdrift or a member of the party being injured, but cannot communicate more sophisticated ideas. Only other creatures fluent in Snowtalk can understand these messages, and they take twice as long to convey as they would if spoken in common. A creature can understand a snowtalk message as long as they can see your silhouette.</p>
 		</description>
 		<sheet alt="Tundra Expertise" />
-	</element>
-
-	<element name="Variant Wastes Native: Tribe Exile" type="Background Variant" source="Sophie's Work" id="ID_BACKGROUND_VARIANT_WASTES_NATIVE">
-		<supports>Variant Wastes Native</supports>
-		<description>
-			<p>Instead of belonging to a specific tribe, some Waste natives are exiles from their former tribes, or never allied with a tribe in the first place. They wander the tundra, sometimes lending their aid to the settlements they come across, and sometimes avoiding them altogether. As an exile, you might stay completely alone, or you might decide to find a small group of similar individuals to travel with. Perhaps you were exiled from a crime you committed (or at least were accused of), or maybe it was a willing choice. In any case, the life of an exile is a generally lonely one and you're more likely to be treated as a strange outsider by those not from the Wastes.</p>
-			<p class="indent">Rather than proficiency in a language, you're proficient in cartographer's tools to remain more self sufficient. And instead of cook's utensiles, you start with a yak and two weeks' worth of rations.</p>
-		</description>
-		<sheet alt="Tribe Exile" />
-		<rules>
-			<select type="Background Feature" name="Tribe Exile Option" supports="Tribe Exile Option" />
-		</rules>
-	</element>
-	<element name="Cartographer's Tools" type="Background Feature" source="Player’s Handbook" id="ID_BACKGROUND_FEATURE_WASTES_NATIVE_OPTION_A">
-		<supports>Tribe Exile Option</supports>
-		<description>
-			<p>>Rather than proficiency in a language, you're proficient in cartographer's tools to remain more self sufficient</p>
-		</description>
-		<rules>
-			<grant type="Proficiency" id="ID_WOTC_PHB_ITEM_TOOL_CARTOGRAPHERS_TOOLS" />
-		</rules>
 	</element>
 </elements>
