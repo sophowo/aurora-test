@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Wastes Native</name>
+		<description>Wastes Native Background</description>
+		<update version="0.0.6">
+			<file name="background-wastes-native.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-guildartisan.xml" />
+		</update>
+	</info>
+
+	<element name="Wastes Native" type="Background" source="Sophie's Work" id="ID_BACKGROUND_WASTES_NATIVE">
+		<description>
+			<p>You are a native of the Tundral Wastes. Born into such a harsh environment, you've managed to adapt and perhaps even thrive in this unfortuante land. You've developed skills to survive through the rampant blizzards and against the feral beasts that also call the Wastes home.</p>
+			<ul class="unstyled">
+				<li><strong>Skill Proficiencies:</strong>Athletics, Survival</li>
+				<li><strong>Tool Proficiencies:</strong>Cook's utensiles</li>
+				<li><strong>Languages:</strong>One of your choice</li>
+				<li><strong>Equipment:</strong>A set of cook's utensiles, a set of traveler’s clothes, a set of heavy winter clothes, a pair of ice picks, and a small bone trinket from a hunted animal</li>
+			</ul>
+			<h5>WASTELAND WANDERER</h5>
+			<p>Most people in the Wastes belong to a tribe or village, helping to support their community whether by providing general leadership, hunting, or other skills. However, a few individuals choose to wander the Wastes, not allifiating themselves with any particular tribe, sometimes helping them out and sometimes avoiding them entirely. Work with your DM to determine your relationship with the other citizens of the Wastes.</p>
+			<table>
+				<thead>
+					<tr><td>d12</td><td>Tribal Roles</td></tr>
+				</thead>
+				<tr><td>1</td><td>Political leaders and chieftains</td></tr>
+        <tr><td>2</td><td>Religious figureheads</td></tr>
+				<tr><td>3</td><td>Hunters and warriors</td></tr>
+				<tr><td>4</td><td>Farmers and gatherers</td></tr>
+				<tr><td>5</td><td>Shamans and iceweavers</td></tr>
+				<tr><td>6</td><td>Leatherworkers and blacksmiths</td></tr>
+				<tr><td>7</td><td>Builders and engineers</td></tr>
+				<tr><td>8</td><td>Scouts and outriders</td></tr>
+				<tr><td>9</td><td>Cooks and brewers</td></tr>
+				<tr><td>10</td><td>Diplomats and emissaries</td></tr>
+				<tr><td>11</td><td>Yak herders and vetinarians</td></tr>
+				<tr><td>12</td><td>Apothecaries and herbalists</td></tr>
+			</table>
+			<p>As a member of a settlement in the Wastes, you'd have performed various roles over the years, but would have one or two particular jobs where you really found your calling.</p>
+			<div element="ID_BACKGROUND_FEATURE_TUNDRA_EXPERTISE" />
+			<h5>SUGGESTED CHARACTERISTICS</h5>
+			<p>Denizens of the Wastes are some of the people most familiar with the value of cooperation and teamwork you'll meet. Whilst some are overly gullible and easily trusting, they understand the importance of community.</p>
+			<h4>VARIANT WASTES NATIVE : TRIBE EXILE</h4>
+			<p>Instead of belonging to a specific tribe, some Waste natives are exiles from their former tribes, or never allied with a tribe in the first place. They wander the tundra, sometimes lending their aid to the settlements they come across, and sometimes avoiding them altogether. As an exile, you might stay completely alone, or you might decide to find a small group of similar individuals to travel with. Perhaps you were exiled from a crime you committed (or at least were accused of), or maybe it was a willing choice. In any case, the life of an exile is a generally lonely one and you're more likely to be treated as a strange outsider by those not from the Wastes.</p>
+      <p class="indent">Rather than proficiency in a language, you're proficient in cartographer's tools to remain more self sufficient. And instead of cook's utensiles, you start with a yak and two weeks' worth of rations.</p>
+		</description>
+		<setters>
+			<set name="short">Athletics, Survival, Cook's Utensiles, Language</set>
+		</setters>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ATHLETICS" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
+			<grant type="Proficiency" id="ID_WOTC_PHB_ITEM_TOOL_COOKS_UTENSILS" />
+			<select type="Language" name="Language (Tundra Native)" supports="Standard||Exotic" /> requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE" />
+			<grant type="Background Feature" id="ID_BACKGROUND_FEATURE_TUNDRA_EXPERTISE" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE" />
+			<select type="Background Variant" name="Variant Wastes Native" supports="Variant Wastes Native" optional="true" />
+			<select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+			<select name="Tribal Role" type="List" optional="true">
+				<item id="1">Political leaders and chieftains</item>
+				<item id="2">Religious figureheads</item>
+				<item id="3">Hunters and warriors</item>
+				<item id="4">Farmers and gatherers</item>
+				<item id="5">Shamans and iceweavers</item>
+				<item id="6">Leatherworkers and blacksmiths</item>
+				<item id="7">Builders and engineers</item>
+				<item id="8">Scouts and outriders</item>
+				<item id="9">Cooks and brewers</item>
+				<item id="10">Diplomats and emissaries</item>
+				<item id="11">Yak herders and vetinarians</item>
+				<item id="12">Apothecaries and herbalists</item>
+			</select>
+			<select name="Personality Trait" type="List" number="2">
+				<item id="1">I'm a strong believer in the power of teamwork. My found family is more important to me than anything.</item>
+				<item id="2">I'm bitter at the luxuries the citizens of the more recognised states get to enjoy.</item>
+				<item id="3">I always wanted to be the one to unite the tribes, and now they're finally unified, I'm angry it wasn't me.</item>
+				<item id="4">I’m sullen and silent, but I'd do anything to protect my tribe.</item>
+				<item id="5">I dislike those who try to form alliances with the other nations - our way of life is the only true way.</item>
+				<item id="6">I don't always agree with the village elders, and have often considered striking out on my own into the tundras.</item>
+				<item id="7">I'm loud, brash, and aggressive. I don't always get along well with my more timid companions.</item>
+				<item id="8">I’m well known for my work, and I'm recognised as being the best at my craft in any of the nearby settlements.</item>
+			</select>
+			<select name="Ideal" type="List">
+				<item id="1">Conquest. I support the unification, and I want to see the other nations put under our thumb. (Lawful)</item>
+				<item id="2">Community. I'm eternally thankful for the gift of community that permeates my culture. I couldn't live somewhere that I had to survive alone.(Good)</item>
+				<item id="3">Tribalism. I yearn for the days of disparate tribes and loose alliances, or better yet, the days before tribes when it was each for themselves. (Chaotic)</item>
+				<item id="4">Resentment. I’ve been wronged by people here. Unified or not, I'll take my revenge one day. (Evil)</item>
+				<item id="5">Ambition. I know I can lead my settlement to success and influence, if only I can take charge. (Neutral)</item>
+				<item id="6">Aspiration. I work harder than anyone else to perfect my chosen craft.</item>
+			</select>
+			<select name="Bond" type="List">
+				<item id="1">I owe everything to the people that made my settlement not just a place to live, but a real home.</item>
+				<item id="2">I saw those I loved massacred by a monstrous beast. One day, I'll take my revenge.</item>
+				<item id="3">I never forgot the faces of those who drove me out of my original home to this settlement.</item>
+				<item id="4">I wish to one day leave the tundras and forge a life elsewhere, even if I'm considered an outsider.</item>
+				<item id="5">Eventually the other nations will come to try and take my home and life away. I want to be ready to stop them they day they try.</item>
+				<item id="6">I will show the world the beauty of my way of life, whether they want to be shown or not.</item>
+			</select>
+			<select name="Flaw" type="List">
+				<item id="1">I’ll do anything to prove myself to my doubters.</item>
+				<item id="2">I’m too trusting of those that offer me the prospect of community.</item>
+				<item id="3">Everywhere I go, my big mouth makes me rivals.</item>
+				<item id="4">I'd kill for a chance at being accepted as one of the other nations.</item>
+				<item id="5">Despite them giving me a home and a family, I'd leave my community in an instant for a chance at wider glory.</item>
+				<item id="6">I can't contain my jealousy of the other nations. If I can't have the luxuries they have, they shouldn't have them either.</item>
+			</select>
+		</rules>
+	</element>
+
+	<element name="Feature: Tundra Expertise" type="Background Feature" source="Sophie's Work" id="ID_BACKGROUND_FEATURE_TUNDRA_EXPERTISE">
+		<supports>Background Feature</supports>
+		<description>
+			<pAs someone who's spent years on the tundras, you've grown accustomed to their unique challenges. You can spot the signs of an incoming snowstorm or blizzard before it happens, and when foraging for food on the tundra, you can find twice as much. Whilst enganged in other activites such as foraging or navigating, you remain alert to danger.</p>
+			<p class="indent">Community is everything in the Wastes. Your settlement, and any others they have a good relationship with, will provide you with lodging and food if necessary. Settlements can send messages to others via expert messengers, allowing you some communication if it's unsafe for you to travel across the tundra.</p>
+			<p class="indent">You must contribute to the community, if able. Neglecting your duties may result in the settlements turning against you and refusing you entry inside.</p>
+      <p class="indent">You are also fluent in Snowtalk, a purely physical method of communication used on the tundras when voice cannot. Snowtalk can convery simple concepts, such as a path being blocked by a snowdrift or a member of the party being injured, but cannot communicate more sophisticated ideas. Only other creatures fluent in Snowtalk can understand these messages, and they take twice as long to convey as they would if spoken in common. A creature can understand a snowtalk message as long as they can see your silhouette.</p>
+		</description>
+		<sheet alt="Tundra Expertise" />
+	</element>
+
+	<element name="Variant Wastes Native: Tribe Exile" type="Background Variant" source="Sophie's Work" id="ID_BACKGROUND_VARIANT_WASTES_NATIVE">
+		<supports>Variant Wastes Native</supports>
+		<description>
+			<p>Instead of belonging to a specific tribe, some Waste natives are exiles from their former tribes, or never allied with a tribe in the first place. They wander the tundra, sometimes lending their aid to the settlements they come across, and sometimes avoiding them altogether. As an exile, you might stay completely alone, or you might decide to find a small group of similar individuals to travel with. Perhaps you were exiled from a crime you committed (or at least were accused of), or maybe it was a willing choice. In any case, the life of an exile is a generally lonely one and you're more likely to be treated as a strange outsider by those not from the Wastes.</p>
+			<p class="indent">Rather than proficiency in a language, you're proficient in cartographer's tools to remain more self sufficient. And instead of cook's utensiles, you start with a yak and two weeks' worth of rations.</p>
+		</description>
+		<sheet alt="Tribe Exile" />
+		<rules>
+			<select type="Background Feature" name="Tribe Exile Option" supports="Tribe Exile Option" />
+		</rules>
+	</element>
+	<element name="Cartographer's Tools" type="Background Feature" source="Player’s Handbook" id="ID_BACKGROUND_FEATURE_WASTES_NATIVE_OPTION_A">
+		<supports>Tribe Exile Option</supports>
+		<description>
+			<p>>Rather than proficiency in a language, you're proficient in cartographer's tools to remain more self sufficient</p>
+		</description>
+		<rules>
+			<grant type="Proficiency" id="ID_WOTC_PHB_ITEM_TOOL_CARTOGRAPHERS_TOOLS" />
+		</rules>
+	</element>
+		</rules>
+	</element>
+</elements>
