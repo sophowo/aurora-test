@@ -10,5 +10,6 @@
 	<files>
 		<file name="itemtest.xml" url="https://raw.githubusercontent.com/sophowo/aurora-test/master/testers/items/itemtest.xml" />
 		<file name="race-new-hobgoblin.xml" url="https://raw.githubusercontent.com/sophowo/aurora-test/master/testers/races/race-new-hobgoblin.xml" />
+		<file name="background-wastes-native.xml" url="https://raw.githubusercontent.com/sophowo/aurora-test/master/testers/backgrounds/background-wastes-native.xml" />
 	</files>
 </index>
