@@ -4,7 +4,7 @@
 		<name>Wastes Native</name>
 		<description>Wastes Native Background</description>
 		<update version="0.0.6">
-			<file name="background-wastes-native.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-guildartisan.xml" />
+			<file name="background-wastes-native.xml" url="https://raw.githubusercontent.com/sophowo/aurora-test/master/testers/backgrounds/background-wastes-native.xml" />
 		</update>
 	</info>
 
